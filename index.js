@@ -15,7 +15,7 @@ const check_nonce = require("./class.js");
 //   return nonce.check_nonce(nim, nonce_1, nonce_2, nonce_3);
 // }
 
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 // app.get("/", "/:nim", "/:nonce_1", "/:nonce_2", "/:nonce_3", (req,res) => {
 //   nim = req.params.nim;
