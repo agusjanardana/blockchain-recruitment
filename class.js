@@ -1,6 +1,7 @@
 // disini adlaah pembuatan kelas dan methodnya.
 
 const { SHA256 } = require("crypto-js");
+const { json, response } = require("express");
 
 class nonce {
   check_nonce(nim, nonce_1, nonce_2, nonce_3) {
@@ -50,6 +51,22 @@ class nonce {
     if (sub3 == "000") {
       status_3 = true;
     }
+
+    if (status_1 == false || status_2 == false || status_3 == false) {
+      let message =
+        `IHHH DIKIT LAGI, SEMANGAT` + myObject[nim].name + `PASTI BISA LAH`;
+    } else {
+      let message =
+        `MANTAP BENAR SEMUA!, SELAMAT SILAHKAN DIKUMPULKAN` +
+        myObject[nim].name;
+    }
+
+    return response.json([
+      (("status_nonce_1 " = status_1),
+      ("status_nonce_2" = status_2),
+      ("status_nonce_3" = status_3),
+      ("message" = message)),
+    ]);
   }
 }
 
