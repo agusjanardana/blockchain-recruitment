@@ -6,25 +6,11 @@ const getNonce = require("./class");
 var http = require("http").createServer(app);
 const check_nonce = require("./class.js");
 
-// function isNonce() {
-//   nim = 1301190061;
-//   nonce_1 = "aiosdjhosiadj2323";
-//   nonce_2 = "aiosdjhosiadj2323";
-//   nonce_3 = "aiosdjhosiadj2323";
+const PORT = process.env.PORT;
 
-//   return nonce.check_nonce(nim, nonce_1, nonce_2, nonce_3);
-// }
-
-const PORT = 3000;
-
-// app.get("/", "/:nim", "/:nonce_1", "/:nonce_2", "/:nonce_3", (req,res) => {
-//   nim = req.params.nim;
-//   nonce_1 = req.params.nonce_1;
-//   nonce_2 = req.params.nonce_2;
-//   nonce_3 = req.params.nonce_3;
-//   nonce.check_nonce(nim, nonce_1, nonce_2, nonce_3);
-//   return "API untuk rekruitasi Blockchain Datascience";
-// });
+app.get("/", (req, res) => {
+  res.json("REKRUITASI BLOCKCHAIN 2021");
+});
 
 app.post("/sendhash", (req, res) => {
   const nim = req.query.nim;

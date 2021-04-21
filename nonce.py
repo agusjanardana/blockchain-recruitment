@@ -19,15 +19,15 @@ def cari_nonce(hash,pola,panjangPola):
   print(newHash)
   return str(i-1)
 
-hash_1 = "hashApaAja"
+hash_1 = "ebb6a95e9f04230dec346553e9c0e10bdc5e700c46bd2a05aa31c8192cb8c422"
 pola_1 = "1"
 panjang_pola_1 = 1
 
-hash_2 = "hashKedua"
+hash_2 = "7ec3646b7438861734b7ce82dadbc286f96099c42c7e91eba9a5f7985a71dbfd"
 pola_2 = "11"
 panjang_pola_2 = 2
 
-hash_3 = "hashKetiga"
+hash_3 = "26f016adf9c6002b2abd901cc1621a38bf82feadf92a4568e04e94afbf09b9b2"
 pola_3 = "111"
 panjang_pola_3 = 3
 
@@ -41,7 +41,7 @@ print('nonce 3 = ',nonce_3)
 
 nim = '1301200000'
 queryParams ="?nim="+nim+"&nonce_1="+nonce_1+"&nonce_2="+nonce_2+"&nonce_3="+nonce_3
-response = requests.post("http://localhost:3000/sendhash"+queryParams)
+response = requests.post("http://localhost:3000/sendhash"+queryParams) 
 print("http://localhost:3000/sendhash"+queryParams)
 print('status nonce 1 :',response.json().get('status_nonce_1'))
 print('status nonce 2 :',response.json().get('status_nonce_2'))
