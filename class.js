@@ -88,8 +88,8 @@ const { json, response } = require("express");
 
 function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
   const myObject = {
-    1301190061: {
-      name: "Agus",
+    1301200000: {
+      name: "NAMA CALON 1",
       hash_1:
         "ebb6a95e9f04230dec346553e9c0e10bdc5e700c46bd2a05aa31c8192cb8c422",
       hash_2:
@@ -108,7 +108,7 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
   if (!myObject[nim]) {
     return {
       status: "error",
-      message: " nim tidak ditemukan",
+      message: "nim tidak ditemukan",
     };
   }
   let temp_1 = myObject[nim].hash_1;
@@ -122,6 +122,7 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
   let sha1 = SHA256(concat_1).toString();
   let sha2 = SHA256(concat_2).toString();
   let sha3 = SHA256(concat_3).toString();
+  console.log(sha1);
 
   let sub1 = sha1.substring(0, 1);
   let sub2 = sha2.substring(0, 2);
@@ -130,16 +131,15 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
   var status_1 = false;
   var status_2 = false;
   var status_3 = false;
-
-  if (sub1 == "0") {
+  if (sub1 == "1") {
     status_1 = true;
   }
 
-  if (sub2 == "00") {
+  if (sub2 == "11") {
     status_2 = true;
   }
 
-  if (sub3 == "000") {
+  if (sub3 == "111") {
     status_3 = true;
   }
   var message = null;
