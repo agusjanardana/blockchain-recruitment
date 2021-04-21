@@ -93,9 +93,9 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
       hash_1:
         "ebb6a95e9f04230dec346553e9c0e10bdc5e700c46bd2a05aa31c8192cb8c422",
       hash_2:
-        " 7ec3646b7438861734b7ce82dadbc286f96099c42c7e91eba9a5f7985a71dbfd",
+        "7ec3646b7438861734b7ce82dadbc286f96099c42c7e91eba9a5f7985a71dbfd",
       hash_3:
-        " 26f016adf9c6002b2abd901cc1621a38bf82feadf92a4568e04e94afbf09b9b2",
+        "26f016adf9c6002b2abd901cc1621a38bf82feadf92a4568e04e94afbf09b9b2",
     },
     1301190369: {
       name: "daffa",
@@ -124,7 +124,6 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
   let sha3 = SHA256(concat_3).toString();
 
   let sub1 = sha1.substring(0, 1);
-
   let sub2 = sha2.substring(0, 2);
   let sub3 = sha3.substring(0, 3);
 
@@ -144,19 +143,28 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
     status_3 = true;
   }
   var message = null;
+  var status = null;
   if (status_1 == false || status_2 == false || status_3 == false) {
     message =
-      `IHHH DIKIT LAGI, SEMANGAT` + myObject[nim].name + `PASTI BISA LAH`;
+      `IHHH DIKIT LAGI, SEMANGAT` +
+      " " +
+      myObject[nim].name +
+      " " +
+      `PASTI BISA LAH`;
+    status = "failed";
   } else {
     message =
-      `MANTAP BENAR SEMUA!, SELAMAT SILAHKAN DIKUMPULKAN` + myObject[nim].name;
+      `MANTAP BENAR SEMUA!, SELAMAT SILAHKAN DIKUMPULKAN` +
+      " " +
+      myObject[nim].name;
+    status = "success";
   }
   return {
     status_nonce_1: status_1,
     status_nonce_2: status_2,
     status_nonce_3: status_3,
     message: message,
-    status: "success",
+    status: status,
   };
 }
 
