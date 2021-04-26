@@ -88,8 +88,8 @@ const { json, response } = require("express");
 
 function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
   const myObject = {
-    1301200000: {
-      name: "NAMA CALON 1",
+    1401180232: {
+      name: "Willy",
       hash_1:
         "ebb6a95e9f04230dec346553e9c0e10bdc5e700c46bd2a05aa31c8192cb8c422",
       hash_2:
@@ -97,11 +97,32 @@ function check_nonce(nim, nonce_1, nonce_2, nonce_3) {
       hash_3:
         "26f016adf9c6002b2abd901cc1621a38bf82feadf92a4568e04e94afbf09b9b2",
     },
-    1301190369: {
-      name: "daffa",
-      hash_1: "apalah itu hash",
-      hash_2: " awokasdokaoksd",
-      hash_3: " akowdokskaodokasd",
+    1301194105: {
+      name: "Pramaishella Ardiani Regita Putri",
+      hash_1:
+        "688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6",
+      hash_2:
+        "f0e4c2f76c58916ec258f246851bea091d14d4247a2fc3e18694461b1816e13b",
+      hash_3:
+        "f969fdbe811d8a66010d6f8973246763147a2a0914afc8087839e29b563a5af0",
+    },
+    1301190445: {
+      name: "Muhammad Zaky Al Fatih",
+      hash_1:
+        "2fe840e13244a9d748883574c1f1b7b1d7020eb39d0735b8f91ef5cf6f35173e",
+      hash_2:
+        "7d3dddf8b2cce3ecf30ade03d3b641f0ff22461b2469156af9349f5cabfcd69b",
+      hash_3:
+        "a856d1b2d68c94c589734d54f201329c633716256b07b9e80b44b238630dd2bf",
+    },
+    1301180504: {
+      name: "Deril Apririaldi Fasya",
+      hash_1:
+        "eeb6c56d6041455991bb1ce6781de704fa8bf0af89465ea33d2770fc62bde462",
+      hash_2:
+        "ceaa401ca0fe5630d9ede1d2ec365fc00848cd1f15336865284ffca18f6b228d",
+      hash_3:
+        "8a08da17cd7c7332a743636c907521df287fec7e152fcd4541833d1f76329050",
     },
   };
 
